@@ -4,12 +4,12 @@
 
 
 module.exports = function(){
-     var client = './app/';
+     var client = './src/app/';
      var config = {
 
-          scssfile: ['content/scss/application.scss'],
-          cssDist: './content/css/',
-          cssFiles:'./content/css/application.css',
+          scssfile: ['src/content/scss/application.scss'],
+          cssDist: './src/content/css/',
+          cssFiles:'./src/content/css/application.css',
           bowerDir: './bower_components',
           index: client+'index.html',
           js: [
