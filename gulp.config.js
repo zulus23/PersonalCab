@@ -4,7 +4,7 @@
 
 
 module.exports = function(){
-     var client = './app/'
+     var client = './app/';
      var config = {
 
           scssfile: ['content/scss/application.scss'],
@@ -26,7 +26,7 @@ module.exports = function(){
                ignorePath: '../..'
           },
 
-     }
+     };
      config.getWiredepDefaultOption = function(){
           var options = {
                bowerJson: config.bower.json,

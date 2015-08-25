@@ -3,5 +3,6 @@
  */
 
 (function(){
-    angular.module('personalCab',[])
+    angular.module('personalCab',['ui.router'])
+
 } )();
