@@ -4,7 +4,11 @@
 
 (function(){
     angular.module('personalCab',['ui.router'])
-        .config(function($stateProvider, $urlRouterProvider){
+        .config(function($stateProvider, $urlRouterProvider,$locationProvider){
+            $locationProvider.html5Mode({
+                enable:true,
+                requireBase:false
+            });
             $urlRouterProvider.otherwise('');
             $stateProvider.state('login', {
                 url:'/login',
@@ -15,7 +19,7 @@
             })
         })
         .run(function ($rootScope, $state) {
-
+                if($rootScope.currentUser !== null)
                     $state.go('login');}
             );
         })
