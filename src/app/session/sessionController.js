@@ -4,6 +4,7 @@
 (function(){
     angular.module('session.module')
         .controller('SessionController',function(){
-
+           var vm = this;
+           vm.currentUser = null;
         })
 })()
