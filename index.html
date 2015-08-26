@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
 
     <title>Персональная страница</title>
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css"/>
+
     <!-- bower:css -->
     <!-- endbower -->
 
@@ -17,6 +21,8 @@
 
 <ui-view class="container"></ui-view>
 
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
 <!-- bower:js -->
 <script src="./bower_components/angular/angular.js"></script>
 <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -26,8 +32,13 @@
 <!-- inject:js -->
 
 <script src="./src/app/personalCabApp.js"></script>
+<script src="./src/app/services/auth-service.js"></script>
+<script src="./src/app/services/currentUser.js"></script>
 <script src="./src/app/session/session.module.js"></script>
 <script src="./src/app/session/sessionController.js"></script>
+<script src="./src/app/login/loginController.js"></script>
+<script src="./src/app/layout/mainController.js"></script>
+
 
 <!-- endinject -->
 

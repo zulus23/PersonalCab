@@ -3,7 +3,17 @@
  */
 var gulp    =  require('gulp');
 var config  =  require('./gulp.config')();
+var fs      =  require('fs');
+var del     =  require('del');
+
 var $ = require('gulp-load-plugins')({lazy: true});
+
+gulp.task('cleanCss',function(done){
+    var delconfig = [].concat(config.cssDist);
+    clean(delconfig,done);
+})
+
+
 
 gulp.task('wiredep',function(){
     var options = config.getWiredepDefaultOption();
@@ -23,3 +33,8 @@ gulp.task('inject',['wiredep'],function(){
         .pipe(gulp.dest(config.client));
 })
 
+/* Function */
+
+function clean(path,done){
+    del(path,done);
+}

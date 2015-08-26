@@ -1,6 +1,6 @@
-<div class="container login-page ui-corner-all">
+<div class="container login-page ui-corner-all" data-ng-controller="LoginController as login">
 <div class="form-signin-heading " > Вход на личную страницу </div>
-<form class="form-signin" >
+<form class="form-signin" name="loginForm" >
      <fieldset >
         <div >
             To manage your MongoDB databases, log in.<p></p>
@@ -12,15 +12,16 @@
         <div class="form-group">
             <label for="login-username" class="control-label">Ф.И.О.(полностью)</label>
             <input class="required ui-corner-all"
-                   type="text" id="login-username" name="username" value="">
+                   type="text" id="login-username" name="username" ng-model="login.username">
         </div>
         <div class="form-group">
             <label for="login-password" class="control-label">СНИЛС</label>
-            <input class="required ui-corner-all" type="password" id="login-password" name="password">
+            <input class="required ui-corner-all" type="password" id="login-password"
+                   name="password" data-ng-model="login.password">
         </div>
     </fieldset>
     <fieldset class="btns">
-         <button type="submit" class="btn btn-primary">Войти</button>
+         <button type="submit" class="btn btn-primary" ng-click="login.login(loginForm)">Войти</button>
     </fieldset>
  </form>
 
